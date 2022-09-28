@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>907wines</title>
+    <link rel="stylesheet" href="index.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcout icon" href="imagenes/Destacadas-09.jpg">
+ </head>
+ 
+<body>
+<header>
+    <a href="index.html"><img src="imagenes/907_NumeroOcre.jpg" class="logo"></a>
+        <nav>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="varietales.html">Varietales</a>
+          <a href="comprar.html">Comprar</a>
+          <a href="contacto.html">Contacto</a>
+          
+        </nav>
+</header>
+
+<section>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="imagenes/DJI_0032.JPG" style="width:100%; height: 450px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="imagenes/DJI_0029.JPG" style="width:100%; height: 450px;">
+</div>
+
+<div class="mySlides fade">
+  <img src="imagenes/DJI_0023.JPG" style="width:100%; height: 450px;">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="imagenes/DJI_0032.JPG" style="width:100%; height: 450px;">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="imagenes/DJI_0029.JPG" style="width:100%; height: 450px;">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="imagenes/DJI_0021.JPG" style="width:100%; height: 450px;">
+        </div>
+        
+    
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 1; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 1; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+
+<div class="sanjuan">
+      <h2> San Juan</h2>
+      <p>
+        San Juan es la segunda provincia con mayor cantidad de vino elaborado en la Argentina. La provincia posee diferentes valles entre la Cordillera de los Andes y el cordón pre-cordillerano, con suelos y características únicas en cada uno. Los valles de Tulúm, Zonda, Ullúm, Calingasta y Pedernal permiten elaborar grandes vinos con particularidades únicas proporcionadas por cada terroir. San Juan y sus 300 días de sol al año permiten soñar con proyectos vitivinícolas de calidad mundial, siendo 907wines uno de ellos.
+      </p>
+</div>
+
+<div class="malbec">
+  <img src="imagenes/EM_Imprenta2021-06.jpg" alt=""width="31%">
+  <img src="imagenes/EM_Malbec-03.png" alt=""width="31%">
+  <img src="imagenes/EM_Chardonnay-01.png" alt=""width="31%">
+</div>
+
+
+</section>
+
+
+</body>
+<footer>
+    <div class="social">
+        <div class="inner">
+            <a href="https://www.instagram.com/907wines/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i> (ícono instagram) @907wines
+            </a>
+            <div class="circle white">
+                <div class="dot"></div>
+            </div>
+            <a href="https://www.facebook.com/907wines-112263511110314" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f"></i> (ícono facebook)/907wines
+            </a>
+            
+            </div>
+            <div class="copy">
+                
+                <p>© 2022. 907wines. Todos los derechos reservados. Términos y condiciones.Políticas de privacidad.</a></p>
+                
+            </div>
+        </div>
+
+</html>
